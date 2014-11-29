@@ -1,0 +1,77 @@
+body {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+button {
+  width: 16em;
+  height: 3em;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #fff;
+  background-color: #03A9F4;
+  font-family: Helvetica;
+  font-weight: 100;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover {
+  background-color: #4FC3F7;
+}
+
+.notify {
+  float: right;
+  width: 15em;
+  height: 100vh;
+  margin: 1em;
+  text-align: center;
+}
+
+.click,
+.click--dbl {
+  position: relative;
+  padding: 1em 0;
+  margin-bottom: 1em;
+  color: #525252;
+  border: 1px solid;
+  border-top-width: 1.5em;
+  border-color: #EC407A;
+  border-radius: 3px;
+  opacity: 0;
+}
+
+.click:before,
+.click--dbl:before {
+  content: attr(data-time);
+  position: absolute;
+  top: -1.3em;
+  left: 0.5em;
+  font-size: 14px;
+  line-height: 1;
+  color: #fff;
+}
+
+.click--dbl {
+  border-color: #26A69A;
+}
+
+.fade-in {
+  transition: 0.3s;
+  opacity: 1;
+}
+
+.fade-out {
+  transition: 1s;
+  opacity: 0;
+}
